@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>💻 Estruturas de Dados em Python - Estudo Interativo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Courier+Prime&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      color: #2980b9;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 1.1em;
+    }
+
+    pre {
+      background-color: #2d3436;
+      color: #dfe6e9;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: 'Courier Prime', monospace;
+    }
+
+    code {
+      font-family: 'Courier Prime', monospace;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>💻 Estruturas de Dados em Python</h1>
+  <p>Guia moderno e interativo para estudo prático</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>1. Listas / Arrays</h2>
+    <p>Lista: coleção de itens que você pode alterar.</p>
+    <pre><code># Criando uma lista
+frutas = ["maçã", "banana", "laranja"]
+frutas.append("uva")
+frutas.remove("banana")
+for fruta in frutas:
+    print(fruta)</code></pre>
+  </div>
+
+  <div class="card">
+    <h2>2. Dicionários / Mapas</h2>
+    <p>Dicionário: pares <code>chave: valor</code>.</p>
+    <pre><code>aluno = {"nome": "João", "idade": 20, "curso": "Engenharia"}
+aluno["idade"] = 21
+aluno["nota"] = 9.5
+for chave, valor in aluno.items():
+    print(chave, "->", valor)</code></pre>
+  </div>
+
+  <div class="card">
+    <h2>3. Tuplas</h2>
+    <p>Tuplas: coleções <strong>imutáveis</strong>.</p>
+    <pre><code>coordenadas = (10, 20)
+for c in coordenadas:
+    print(c)</code></pre>
+  </div>
+
+  <div class="card">
+    <h2>4. Conjuntos (sets)</h2>
+    <p>Conjuntos: elementos <strong>únicos</strong>, sem ordem definida.</p>
+    <pre><code>numeros = {1,2,3,4,4,5}
+numeros.add(6)
+numeros.remove(3)
+a = {1,2,3}
+b = {3,4,5}
+print(a.union(b))
+print(a.intersection(b))</code></pre>
+  </div>
+
+  <div class="card">
+    <h2>5. Pilhas e Filas</h2>
+    <p>Pilhas → LIFO, Filas → FIFO.</p>
+    <pre><code># Pilha
+pilha = []
+pilha.append(1)
+pilha.append(2)
+print(pilha.pop())
+
+# Fila
+from collections import deque
+fila = deque()
+fila.append(1)
+fila.append(2)
+print(fila.popleft())</code></pre>
+  </div>
+
+  <div class="card">
+    <h2>6. Matrizes (arrays multidimensionais)</h2>
+    <p>Matrizes: listas dentro de listas, úteis para tabelas ou grades.</p>
+    <pre><code>matriz = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+for linha in matriz:
+    for elemento in linha:
+        print(elemento, end=" ")
+    print()</code></pre>
+  </div>
+
+</div>
+
+<footer>
+  📚 Estude praticando: copie e rode cada código no Python para fixar os conceitos!
+</footer>
+
+</body>
+</html>
